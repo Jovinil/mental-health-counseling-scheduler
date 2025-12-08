@@ -8,24 +8,22 @@
         {{ $label }}
     </label>
 
-    <flux:dropdown class="flex" position="bottom" align="start">
+     <div class="dropdown w-full">
+        <div tabindex="0" role="button"
+            class="btn w-full justify-between normal-case">
+            Select Counselor
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-70"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 9l-7 7-7-7" />
+            </svg>
+        </div>
 
-        {{-- Trigger Button --}}
-        <flux:button
-            class="w-full justify-between! text-left"
-            icon:trailing="chevron-down"
-        >
-            Select Time
-        </flux:button>
-
-        {{-- Menu List --}}
-        <flux:menu>
-            @foreach ($times as $time)
-                <flux:menu.item class="w-full" wire:click="$set('selectedTime', '{{ $time }}')">
-                    {{ $time }}
-                </flux:menu.item>
-            @endforeach
-        </flux:menu>
-
-    </flux:dropdown>
+        <ul tabindex="0"
+            class="dropdown-content z-1 menu p-2 shadow bg-base-100 rounded-box w-full">
+           @foreach ($times as $time)
+               <li><a>{{ $time }}</a></li>
+           @endforeach
+        </ul>
+    </div>
 </div>

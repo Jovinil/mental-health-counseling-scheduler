@@ -10,12 +10,12 @@
 <div
 
     x-data="{ open: false }"
-    {{ $attributes->merge(['class' => 'bg-gray-50 shadow rounded-xl border border-gray-200 w-full h-full pb-4']) }}
+    {{ $attributes->merge(['class' => 'bg-gray-50 hover:shadow-xl/50 shadow-lg/50 shadow-indigo-500/50 rounded-xl border border-gray-200 w-full h-full pb-4']) }}
 >
 
     <!-- Main Content -->
     <div class="flex flex-col items-center justify-between w-full rounded-xl">
-        <div class="bg-gray-100 flex justify-between w-full p-4">
+        <div class="bg-gray-100 flex justify-between w-full rounded-t-xl p-4">
             <div class="flex gap-3">
                 profile
                 <span>
