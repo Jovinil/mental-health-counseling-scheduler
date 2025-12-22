@@ -55,8 +55,7 @@ class AppointmentController extends Controller
             'appointment_session_id' => ['required', 'exists:appointment_sessions,id'],
             'appointment_type'       => ['nullable', Rule::in($types)],
             'session_date'           => ['required', 'date'],
-            // if you want, you can also validate the format:
-            // 'session_time'           => ['required', 'date_format:"h:i A"'],
+
             'session_time'           => ['required'],
             'notes'                  => ['nullable', 'string', 'max:1000'],
             'phone'                  => ['nullable', 'string', 'max:30'],
